@@ -1,0 +1,8 @@
+61c432,127.0.0.1,GET,http://localhost/hackaton/web/app_dev.php/login,1477712190,,200
+b37d68,127.0.0.1,POST,http://localhost/hackaton/web/app_dev.php/login_check,1477712204,,302
+d8611b,127.0.0.1,GET,http://localhost/hackaton/web/app_dev.php/login,1477712205,,200
+d680a7,127.0.0.1,GET,http://localhost/hackaton/web/app_dev.php/login,1477712457,,200
+268719,127.0.0.1,POST,http://localhost/hackaton/web/app_dev.php/login_check,1477712466,,302
+e11ac2,127.0.0.1,GET,http://localhost/hackaton/web/app_dev.php/login,1477712467,,200
+d06deb,127.0.0.1,GET,http://localhost/hackaton/web/app_dev.php/login,1477712647,,200
+d6d725,127.0.0.1,POST,http://localhost/hackaton/web/app_dev.php/login_check,1477712656,,302
