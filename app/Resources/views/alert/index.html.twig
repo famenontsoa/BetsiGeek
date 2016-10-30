@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Alert list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Signame</th>
+                <th>Ipsource</th>
+                <th>Sigpriority</th>
+                <th>Timestamp</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alert in alerts %}
+            <tr>
+                <td><a href="{{ path('alert_show', { 'id': alert.id }) }}">{{ alert.id }}</a></td>
+                <td>{{ alert.sigName }}</td>
+                <td>{{ alert.ipSource }}</td>
+                <td>{{ alert.sigPriority }}</td>
+                <td>{{ alert.timeStamp }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('alert_show', { 'id': alert.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('alert_edit', { 'id': alert.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('alert_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

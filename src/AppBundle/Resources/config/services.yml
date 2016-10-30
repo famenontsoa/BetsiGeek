@@ -2,3 +2,15 @@ services:
 #    app.example:
 #        class: AppBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+    app.admin.signature:
+        class: AppBundle\Admin\SignatureAdmin
+        arguments: [~, AppBundle\Entity\Signature, AppBundle:SignatureAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Signature }
+        calls:
+           - [addChild, ['@app.admin.iphdr']]
+    app.admin.iphdr:
+        class: AppBundle\Admin\IphdrAdmin
+        arguments: [~, AppBundle\Entity\Iphdr, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Iphdr }
